@@ -1,0 +1,49 @@
+<section id="projects" class="py-20 bg-black relative overflow-hidden">
+    <div class="container mx-auto px-4 relative z-10">
+      <!-- Título de la sección -->
+      <h2 class="text-3xl font-bold mb-12 flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #00f1f1;"><path d="m7.375 16.781 1.25-1.562L4.601 12l4.024-3.219-1.25-1.562-5 4a1 1 0 0 0 0 1.562l5 4zm9.25-9.562-1.25 1.562L19.399 12l-4.024 3.219 1.25 1.562 5-4a1 1 0 0 0 0-1.562l-5-4zm-1.649-4.003-4 18-1.953-.434 4-18z"></path></svg>
+        Projects_
+        <span class="animate-pulse ml-1">|</span>
+      </h2>
+  
+      <!-- Lista de proyectos -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <ng-container *ngFor="let project of projects; let i = index">
+          <div class="bg-cyan-900/20 border border-cyan-700/50 hover:border-cyan-400 transition-all duration-300 group backdrop-blur-sm p-6">
+            <!-- Imagen del proyecto -->
+            <div class="aspect-video bg-cyan-800/30 rounded-lg mb-4 overflow-hidden group-hover:ring-2 group-hover:ring-cyan-400 transition-all duration-300">
+              <img
+                [src]="project.image"
+                [alt]="'Project ' + (i + 1)"
+                class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+              />
+            </div>
+  
+            <!-- Detalles del proyecto -->
+            <h3 class="text-xl font-semibold mb-2">{{ project.name }}</h3>
+            <p class="text-cyan-300 mb-4">{{ project.description }}</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span 
+                *ngFor="let tech of project.technologies" 
+                class="px-2 py-1 bg-cyan-800/30 rounded text-xs text-cyan-300">
+                {{ tech }}
+              </span>
+            </div>
+  
+            <!-- Botón de lanzamiento -->
+            <button 
+              class="w-full border-cyan-700 text-cyan-400 bg-slate-50 hover:bg-cyan-700 hover:text-black transition-all duration-300 flex justify-center	">
+              <svg xmlns="http://www.w3.org/2000/svg" class="mr-2" width="20" height="20" viewBox="0 0 24 24" style="fill: #00f1f1;"><path d="m13 3 3.293 3.293-7 7 1.414 1.414 7-7L21 11V3z"></path><path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"></path></svg>
+              Launch Project
+            </button>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  
+    <!-- Fondo decorativo -->
+    <div class="absolute inset-0 bg-grid-cyan-900/10 bg-[size:20px_20px]"
+         style="background-image: radial-gradient(circle, #0ff 0.5px, transparent 0.5px);"></div>
+  </section>
+  

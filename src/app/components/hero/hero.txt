@@ -1,0 +1,44 @@
+<section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+<div className="absolute inset-0 bg-grid-cyan-900/20 bg-[size:50px_50px]" style={{ backgroundImage: 'radial-gradient(circle, #0ff 1px, transparent 1px)' }}></div>
+<div className="relative z-10 container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
+  <div className="text-center md:text-left md:w-1/2 space-y-6 mb-8 md:mb-0">
+    <h1 className="text-5xl sm:text-7xl font-bold tracking-tighter">
+      <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500">
+        DEVELOPER_
+      </span>
+      <span className="animate-pulse">|</span>
+    </h1>
+    <p className="text-lg text-cyan-300 max-w-2xl">
+      Full Stack Developer especializado en crear experiencias digitales excepcionales. 
+      Transformando ideas en código, un proyecto a la vez.
+    </p>
+    <div className="flex justify-center md:justify-start space-x-4 pt-4">
+      {[
+        { icon: Github, label: 'GitHub' },
+        { icon: Linkedin, label: 'LinkedIn' }
+      ].map((item, index) => (
+        <Button 
+          key={index}
+          variant="outline" 
+          className="border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-black transition-all duration-300"
+        >
+          <item.icon className="mr-2 h-4 w-4" />
+          {item.label}
+        </Button>
+      ))}
+    </div>
+  </div>
+  <div className="md:w-1/2 flex justify-center md:justify-end">
+    <div className="relative w-64 h-64 md:w-80 md:h-80 hexagon">
+      <Image
+        src="https://lh3.googleusercontent.com/a/ACg8ocKFY_13jT3xDQSBy9ZFdv6L_XKVa3_7PAIXNU6fD8nuA0BTJsx-ig=s288-c-no"
+        alt="Developer Portrait"
+        layout="fill"
+        objectFit="cover"
+        className="rounded-full"
+      />
+    </div>
+  </div>
+</div>
+<div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent"></div>
+</section>

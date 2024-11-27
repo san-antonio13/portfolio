@@ -1,0 +1,56 @@
+<section id="contact" class="py-20 bg-black relative overflow-hidden">
+    <div class="container mx-auto px-4 max-w-4xl relative z-10">
+      <!-- Título del formulario -->
+      <h2 class="text-3xl font-bold mb-12 flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M22 2L11 13" />
+          <circle cx="11" cy="13" r="9" />
+        </svg>
+        Contact_
+        <span class="animate-pulse ml-1">|</span>
+      </h2>
+  
+      <!-- Tarjeta contenedora -->
+      <div class="bg-cyan-900/20 border border-cyan-700/50 backdrop-blur-sm p-6 rounded-lg">
+        <!-- Formulario -->
+        <form (ngSubmit)="submitForm()" [formGroup]="contactForm" class="space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Input de nombre -->
+            <input 
+              formControlName="name" 
+              type="text" 
+              placeholder="Name" 
+              class="bg-black/50 border border-cyan-700 focus:border-cyan-400 text-cyan-300 placeholder-cyan-700 px-4 py-2 rounded"
+            />
+            <!-- Input de email -->
+            <input 
+              formControlName="email" 
+              type="email" 
+              placeholder="Email" 
+              class="bg-black/50 border border-cyan-700 focus:border-cyan-400 text-cyan-300 placeholder-cyan-700 px-4 py-2 rounded"
+            />
+          </div>
+          <!-- Área de texto -->
+          <textarea 
+            formControlName="message" 
+            placeholder="Message" 
+            class="bg-black/50 border border-cyan-700 focus:border-cyan-400 text-cyan-300 placeholder-cyan-700 px-4 py-2 rounded min-h-[150px] w-full">
+          </textarea>
+          <!-- Botón de enviar -->
+          <button 
+            type="submit" 
+            class="w-full bg-cyan-700 hover:bg-cyan-600 text-black transition-all duration-300 px-4 py-2 rounded flex justify-center items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M22 2L11 13" />
+              <circle cx="11" cy="13" r="9" />
+            </svg>
+            Transmit Message
+          </button>
+        </form>
+      </div>
+    </div>
+  
+    <!-- Fondo decorativo -->
+    <div class="absolute inset-0 bg-grid-cyan-900/10 bg-[size:10px_10px]" style="background-image: radial-gradient(circle, #0ff 0.5px, transparent 0.5px);"></div>
+  </section>
+  

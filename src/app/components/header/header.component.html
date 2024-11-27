@@ -1,0 +1,20 @@
+<header class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-cyan-900">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-16">
+            <div class="flex items-center space-x-2">
+                <span class="font-bold text-lg">DEV_OS v1.0</span>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a  class="text-sm hover:text-cyan-300 transition-colors relative group"
+                    *ngFor="let item of navItems"   
+                    [routerLink]="item.link"
+                    routerLinkActive="active"
+                >
+                    {{item.label}}
+                    <span   
+                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 transition-all group-hover:w-full"></span>
+                </a>
+            </nav>
+        </div>
+    </div>
+</header>
